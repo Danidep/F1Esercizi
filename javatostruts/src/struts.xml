@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+    "http://struts.apache.org/dtds/struts-2.5.dtd">
+    
+   <struts>
+	<constant name="struts.mapper.action.prefix.enabled" value="true" />
+	<constant name="struts.devMode" value="true" />
+	
+	<package name="default" extends="struts-default">
+	</package>
+	
+	<package name="root" namespace="/" extends="default">
+		<default-action-ref name="dati" />
+		<action name="dati">
+     		<result>/dati.jsp</result>
+   		</action>
+   		<action name="stampa" class="it.javatostruts.action.TestAction">
+     		<result>/stampa.jsp</result>
+   		</action>
+   		</package>
+   	</struts>
