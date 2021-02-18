@@ -2,21 +2,19 @@
 <!DOCTYPE struts PUBLIC
     "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
     "http://struts.apache.org/dtds/struts-2.5.dtd">
-    
-     <struts>
-	<constant name="struts.mapper.action.prefix.enabled" value="true" />
+
+<struts>
+	<constant name="struts.mapper.action.prefix.enabled"
+		value="true" />
 	<constant name="struts.devMode" value="true" />
-	
+
 	<package name="default" extends="struts-default">
 	</package>
-	
+
 	<package name="root" namespace="/" extends="default">
 		<default-action-ref name="index" />
 		<action name="index" class="it.struts_tris.action.GestioneStatoAction" method="execute">
-     		<result>/index.jsp</result>
-   		</action>
-   				<action name="stampa">
-     		<result>/quadrato.jsp</result>
-   		</action>
-   		</package>
-   		</struts>
+			<result>/index.jsp</result>
+		</action>
+	</package>
+</struts>

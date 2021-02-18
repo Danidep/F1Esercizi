@@ -1,20 +1,20 @@
 .block {
-  display: flex;
-  width: 100px;
-  height: 100px;
-  align-items: center;
-  justify-content: center;
-  font-size: 3rem;
-  font-weight: bold;
-  border: 3px solid black;
-  transition: background 0.2s ease-in-out;
+	display: flex;
+	width: 100px;
+	height: 100px;
+	align-items: center;
+	justify-content: center;
+	font-size: 3rem;
+	font-weight: bold;
+	border: 3px solid black;
+	transition: background 0.2s ease-in-out;
 }
 
 .block:hover {
-  cursor: pointer;
-  background: #FAEBD7;
+	cursor: pointer;
+	background: #FAEBD7;
 }
 
 .occupied:hover {
-  background: #ff3a3a;
+	background: #ff3a3a;
 }
