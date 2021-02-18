@@ -13,7 +13,7 @@ public class TrisAction extends ActionSupport{
 		 String x = trisform.getX();
 		 String o = trisform.getO();
 		 
-		 return a ;
+		 return SUCCESS ;
 	 }
 	
 	public TrisForm getTrisform() {

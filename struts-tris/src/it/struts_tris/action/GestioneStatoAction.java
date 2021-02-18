@@ -13,7 +13,8 @@ public class GestioneStatoAction extends ActionSupport {
 	public String execute() throws Exception {
 		if (trisform == null)
 			trisform = new TrisForm();
-		else {
+		else if(trisform.getX()!=null && trisform.getO()!=null){
+			trisform.getId(1);
 			//TODO: (2) gestisci valore da scrivere nel quadratino cliccato
 		}
 
@@ -22,12 +23,12 @@ public class GestioneStatoAction extends ActionSupport {
 		if(contaTurni/2 == 0) {
 			trisform.setX("X");
 			trisform.setO(null);
-		}else {
+		}else{
 			trisform.setO("O");
 			trisform.setX(null);
 		}
 		
-		//TODO: (1) Incrementa contaTurni
+		contaTurni ++;
 		
 		return SUCCESS;
 	}
