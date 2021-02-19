@@ -12,11 +12,10 @@
 			</s:include>
 		</s:iterator>
 		<s:form name="playerActionForm" action="index">
-			<s:hidden value="trisform.x" />
-			<s:hidden value="trisform.o" />
-			<s:hidden value="trisform.contaTurni" />
+			<s:hidden name="trisform.x" value="%{trisform.x}" />
+			<s:hidden name="trisform.o" value="%{trisform.o}" />
 			<s:hidden name="trisform.id" value="%{trisform.id}"/>
-			<s:hidden value="lastBlockValue" />
+			<s:hidden value="trisGrigliaForm.contaTurni" />
 		</s:form>
 	</div>
 </div>

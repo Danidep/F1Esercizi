@@ -20,6 +20,7 @@
 	</head>
 	<body>
 		<s:include value="griglia.jsp"></s:include>
+		<a href="<s:url action='reset'/>">Reset </a> 
 	</body>
 </html>
 

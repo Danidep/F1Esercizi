@@ -16,5 +16,8 @@
 		<action name="index" class="it.struts_tris.action.GestioneStatoAction" method="execute">
 			<result>/index.jsp</result>
 		</action>
+				<action name="reset" class="it.struts_tris.action.GestioneStatoAction" method="executeReset">
+     		<result>/index.jsp</result>
+   		</action>
 	</package>
 </struts>

@@ -8,9 +8,7 @@ public class TrisForm implements Serializable{
 	
 	String x;
 	String o;
-	int contaTurni;
 	int id;
-	
 	
 	public int getId() {
 		return id;
@@ -30,12 +28,7 @@ public class TrisForm implements Serializable{
 	public void setO(String o) {
 		this.o = o;
 	}
-	public int getContaTurni() {
-		return contaTurni;
-	}
-	public void setContaTurni(int contaTurni) {
-		this.contaTurni = contaTurni;
-	}
+	
 	
 	
 
