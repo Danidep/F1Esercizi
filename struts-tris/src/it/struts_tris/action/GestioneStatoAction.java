@@ -13,6 +13,8 @@ public class GestioneStatoAction extends ActionSupport {
 
 	private TrisForm trisform;
 	private TrisGrigliaForm trisGrigliaForm;
+	private CondizioniVincitaAction condizioniVincitaAction;
+	
 	
 	public String executeReset() throws Exception {
 		Map session = (Map)ActionContext.getContext().get("session");
@@ -23,7 +25,7 @@ public class GestioneStatoAction extends ActionSupport {
 	@Override
 	public String execute() throws Exception {
 		int contaTurni = 0;
-		String lastBlockValue = "";
+		String lastBlockValue = " ";
 		
 		Map session = (Map)ActionContext.getContext().get("session");
 		trisGrigliaForm = (TrisGrigliaForm)session.get("SalvaGriglia");
@@ -38,8 +40,11 @@ public class GestioneStatoAction extends ActionSupport {
 			lastBlockValue = trisform.getX() != null && !trisform.getX().equals("") ? trisform.getX() : trisform.getO();
 			trisGrigliaForm.setContaTurni(++contaTurni);
 		}
-		
-		trisGrigliaForm.put(trisform.getId(), lastBlockValue);
+		if(trisGrigliaForm.containsKey(trisform.getId()) && (trisGrigliaForm.get(trisform.getId()).equals("X") || trisGrigliaForm.get(trisform.getId()).equals("O"))) {
+				return SUCCESS;
+		} else {
+			trisGrigliaForm.put(trisform.getId(), lastBlockValue);
+		}
 
 		if (contaTurni % 2 == 0) {
 			trisform.setX("X");
@@ -51,7 +56,10 @@ public class GestioneStatoAction extends ActionSupport {
 
 		session.put("SalvaGriglia", trisGrigliaForm);
 		
-		return SUCCESS;
+		condizioniVincitaAction = new CondizioniVincitaAction();
+		
+		
+		return condizioniVincitaAction.execute();
 	}
 	
 

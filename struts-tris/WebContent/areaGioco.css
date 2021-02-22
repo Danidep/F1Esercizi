@@ -1,6 +1,6 @@
 .play-area {
-	display: grid;
+	display: block;
 	width: 300px;
 	height: 300px;
-	grid-template-columns: auto auto auto;
+	font-size:0;
 }

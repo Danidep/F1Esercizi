@@ -3,6 +3,8 @@
 
 <div class="container">
 	<h1>Tic-Tac-Toe</h1>
+		<h2 style="color:Red;">Giocatore 1 --> X</h2>
+		<h2 style="color:Navy;">Giocatore 2 --> O</h2>
 	<div class="play-area">
 		<s:iterator begin="0" end="8" step="1" var="i">
 			<s:include value="quadrato.jsp">

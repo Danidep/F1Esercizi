@@ -10,7 +10,15 @@ public class TrisGrigliaForm implements Serializable{
 	
 	Map <Integer,String> griglia = new HashMap<Integer, String>();
 	int contaTurni;
+	String lastBlockValue;
+		
 	
+	public String getLastBlockValue() {
+		return lastBlockValue;
+	}
+	public void setLastBlockValue(String lastBlockValue) {
+		this.lastBlockValue = lastBlockValue;
+	}
 	public int getContaTurni() {
 		return contaTurni;
 	}

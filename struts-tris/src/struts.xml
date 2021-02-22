@@ -15,6 +15,8 @@
 		<default-action-ref name="index" />
 		<action name="index" class="it.struts_tris.action.GestioneStatoAction" method="execute">
 			<result>/index.jsp</result>
+			<result name="X">/vincitoreX.jsp</result>
+     		<result name="O">/vincitoreO.jsp</result>
 		</action>
 				<action name="reset" class="it.struts_tris.action.GestioneStatoAction" method="executeReset">
      		<result>/index.jsp</result>
